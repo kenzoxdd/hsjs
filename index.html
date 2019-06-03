@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body style="background-image: url(images/bg.jpg); background-size: 100%">
+   <script type="text/javascript">
+     let lol =["images/1.png", "images/1.png", "images/2.png", "images/3.png", "images/4.png", "images/5.png", "images/6.png", "images/7.png", "images/8.png", "images/9.png", "images/10.png"];
+        let getRandom = function(){
+          let rand = Math.random()*4
+          let round = Math.round(rand)
+         
+          return round
+        }
+
+        let createEnemyCard = function(arg){
+          for(let index = 0; index<arg; index = index + 1){
+                let elem = document.createElement("img")
+                document.body.appendChild(elem)
+                let rand = Math.random()*9
+                let round = Math.round(rand)
+                elem.style.height = "250px"
+                elem.src = lol[round]
+
+          } 
+        }
+        let createPlayerCard = function(arg){
+          for(let index = 0; index<arg; index = index + 1){
+                let elem = document.createElement("img")
+                document.body.appendChild(elem);
+                let rand = Math.random()*9
+                let round = Math.round(rand)
+                elem.style.height = "250px"
+                elem.src = lol[round]
+          } 
+        }
+   </script>
+  </body>
+</html>
